@@ -27,6 +27,10 @@ type responseLogger struct {
 	authInfo string
 }
 
+func (l *responseLogger) Flush() {
+	l.w.(http.Flusher).Flush()
+}
+
 func (l *responseLogger) Header() http.Header {
 	return l.w.Header()
 }

@@ -90,7 +90,9 @@ func (u *UpstreamProxy) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 }
 
 func NewReverseProxy(target *url.URL) (proxy *httputil.ReverseProxy) {
-	return httputil.NewSingleHostReverseProxy(target)
+	rp := httputil.NewSingleHostReverseProxy(target)
+	rp.FlushInterval = 100 * time.Millisecond
+	return rp
 }
 func setProxyUpstreamHostHeader(proxy *httputil.ReverseProxy, target *url.URL) {
 	director := proxy.Director
