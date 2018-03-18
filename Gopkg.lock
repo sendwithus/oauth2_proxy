@@ -84,11 +84,7 @@
   name = "golang.org/x/net"
   packages = [
     "context",
-    "context/ctxhttp",
-    "http2",
-    "http2/hpack",
-    "idna",
-    "lex/httplex"
+    "context/ctxhttp"
   ]
   revision = "9dfe39835686865bff950a07b394c12a98ddc811"
 
@@ -103,27 +99,6 @@
     "jwt"
   ]
   revision = "9ff8ebcc8e241d46f52ecc5bff0e5a2f2dbef402"
-
-[[projects]]
-  name = "golang.org/x/text"
-  packages = [
-    "collate",
-    "collate/build",
-    "internal/colltab",
-    "internal/gen",
-    "internal/tag",
-    "internal/triegen",
-    "internal/ucd",
-    "language",
-    "secure/bidirule",
-    "transform",
-    "unicode/bidi",
-    "unicode/cldr",
-    "unicode/norm",
-    "unicode/rangetable"
-  ]
-  revision = "f21a4dfb5e38f5895301dc265a8def02365cc3d0"
-  version = "v0.3.0"
 
 [[projects]]
   branch = "master"
@@ -172,6 +147,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "be22dac186df9ba60026ad6de4db811f7792a7d0f3f358a30fc1fae4807d8b77"
+  inputs-digest = "efab48a0e196c2a849bfbe9aa02d2ae28d281ce1bfe9f23720d648858eefc8e6"
   solver-name = "gps-cdcl"
   solver-version = 1
