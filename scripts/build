@@ -1,0 +1,8 @@
+#!/bin/bash
+
+tag=$(git rev-parse --short HEAD)
+
+docker build -t sendwithus/oauth2-proxy:$tag .
+docker tag sendwithus/oauth2-proxy:$tag sendwithus/oauth2-proxy:latest
+docker push sendwithus/oauth2-proxy:latest
+docker push sendwithus/oauth2-proxy:$tag
